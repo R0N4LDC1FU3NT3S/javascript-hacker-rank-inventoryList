@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main-splitpane-left" class="coding-question__left-pane"><section class="question-view__title-wrapper"><h1 class="question-view__title">2. JavaScript: Inventory List</h1></section><section class="question-view__instruction"><div class="candidate-rich-text"><div id="62tberreapo-instruction"><style type="text/css">.ps-content-wrapper-v0 div { margin: 0 auto; overflow: auto; } .ps-content-wrapper-v0 div.preheader { display: none; } .ps-content-wrapper-v0 p { white-space: pre-wrap; padding-left: 4px; padding-right: 4px; padding-top: 0px; padding-bottom: 2px; } .ps-content-wrapper-v0 p.section-title { font-weight: bold; padding-bottom: 0px; } .ps-content-wrapper-v0 ol.plain-list, .ps-content-wrapper-v0 ul.plain-list { list-style-type: none; padding: 4px; } .ps-content-wrapper-v0 li { white-space: normal; margin-top: 4px; margin-bottom: 4px; } .ps-content-wrapper-v0 code { color: black; } .ps-content-wrapper-v0 pre { background-color: #f4faff; border: 0; border-radius: 2px; margin: 8px; padding: 10px; } .ps-content-wrapper-v0 pre.scrollable-full-json { overflow-x: scroll; white-space: pre; } .ps-content-wrapper-v0 pre.scrollable-json { height: 300px; overflow-y: scroll; display: inline-grid; white-space: pre-wrap; padding-left: 8px; padding-right: 8px; padding-top: 4px; padding-bottom: 4px; } .ps-content-wrapper-v0 div.equation-parent { width: 400px; text-align: center; border: 1px solid #000; padding: 8px; } .ps-content-wrapper-v0 div.equation-parent.equation { width: 100%; display: inline-block; } .ps-content-wrapper-v0 figure { background-color: transparent; display: table; margin-top: 8px; margin-bottom: 8px; text-align: center; margin-left: auto; margin-right: auto; } .ps-content-wrapper-v0 figcaption { text-align: center; display: table-caption; caption-side: bottom; margin-top: 4px; margin-bottom: 4px; } .ps-content-wrapper-v0 img { width: auto; max-width: 100%; height: auto; } .ps-content-wrapper-v0 details { background-color: transparent; padding-left: 4px; padding-right: 4px; padding-top: 0px; padding-bottom: 2px; } .ps-content-wrapper-v0 details details { padding-left: 8px; padding-right: 8px; } .ps-content-wrapper-v0 details summary { background-color: #39424e; color: white; font-weight: bold; margin-top: 4px; margin-bottom: 4px; padding: 8px; } .ps-content-wrapper-v0 details details summary code { color: black; font-weight: bold; padding-left: 2px; padding-right: 2px; padding-top: 4px; padding-right: 4px; margin-left: 4px; } .ps-content-wrapper-v0 details div.collapsable-details { margin: 0 auto; padding-left: 4px; padding-right: 4px; padding-top: 0px; padding-bottom: 2px; overflow: auto; } .ps-content-wrapper-v0 details div.collapsable-details pre { margin-left: 4px; margin-right: 4px; margin-top: 4px; margin-bottom: 4px; } .ps-content-wrapper-v0 table.normal { border: 1px solid black; border-collapse: collapse; border-color: darkgray; margin: 0 auto; margin-top: 8px; margin-bottom: 8px; padding: 8px; width: 96%; table-layout: fixed; } .ps-content-wrapper-v0 table.normal tbody { display: block; overflow-x: auto; overflow-y: hidden; } .ps-content-wrapper-v0 table.normal tbody tr:first-child th { font-weight: bold; white-space: normal; } .ps-content-wrapper-v0 table.normal tbody tr th, .ps-content-wrapper-v0 table.normal tbody tr td { font-weight: normal; white-space: nowrap; text-align: center; vertical-align: middle; border: 1px solid black; border-color: darkgray; padding: 8px; } .ps-content-wrapper-v0 table.database-table { border-collapse: collapse; border-color: darkgray; border: 1px solid black; width: auto; margin-left: 4px; margin-top: 8px; margin-bottom: 8px; padding: 8px; } .ps-content-wrapper-v0 table.database-table tbody { overflow-x: auto; overflow-y: hidden; border: none; } .ps-content-wrapper-v0 table.database-table tbody tr th, .ps-content-wrapper-v0 table.database-table tbody tr td { font-weight: normal; white-space: nowrap; text-align: center; vertical-align: middle; border: 1px solid black; border-color: darkgray; padding: 8px; } .ps-content-wrapper-v0 table.database-table tbody tr th { font-weight: bold; border: 1px solid black; } .ps-content-wrapper-v0 table.database-table tbody tr:nth-child(2) td { border: 1px solid black; } .ps-content-wrapper-v0 table.database-table tbody tr:nth-child(n+2) td:first-child { border-left-color: black; } .ps-content-wrapper-v0 table.database-table tbody tr:nth-child(n+2) td:last-child { border-right-color: black; } .ps-content-wrapper-v0 table.database-table tbody tr:last-child td { border-bottom-color: black; } .ps-content-wrapper-v0 table.database-table tbody tr td.description { text-align: left; white-space: pre-wrap; } .ps-content-wrapper-v0 table.normal tbody tr th.description { width: 60%; } .ps-content-wrapper-v0 table.function-params tbody tr:first-child td.headers { border-bottom-width: 2px; } .ps-content-wrapper-v0 table.function-params tbody tr:last-child td { border-top-width: 2px; border-top-color: darkgray; } .ps-content-wrapper-v0 table.function-params tbody tr td.headers { width: 25%; font-weight: bold; text-align: center; border: 1px solid black; border-right-width: 2px; border-color: darkgray; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell { width: 100%; height: 100%; padding: 0px; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table { width: 100%; height: 100%; padding: 0px; margin: 0px; border: 0; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr td.code { white-space: normal; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr th { border-top: 0; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr th:first-child { border-left: 0; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr th:last-child { border-right: 0; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr:last-child td { border-bottom: 0; border-top-width: 1px; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr td:first-child { border-left: 0; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr td:last-child { border-right: 0; } .ps-content-wrapper-v0 table.sudoku { border-collapse: collapse; border-color: darkgray; margin: 0 auto; margin-top: 8px; margin-bottom: 8px; padding: 8px; } .ps-content-wrapper-v0 table.sudoku colgroup, tbody { border: 3px solid black; } .ps-content-wrapper-v0 table.sudoku td { border: 1px solid black; height: 25px; width: 25px; text-align: center; padding: 0; } .ps-content-wrapper-v0 .left { text-align: left; } .ps-content-wrapper-v0 .right { text-align: right; } .ps-content-wrapper-v0 .code { font-family: monospace; white-space: nowrap; } .ps-content-wrapper-v0 .json-object-array ol, .ps-content-wrapper-v0 .json-object-array ol ul { margin-top: 0px; padding-left: 14px; } .json-object-array li { float: left; margin-right: 30px; margin-left: 10px; } .json-object-array pre { padding: 4px; margin-left: 0px; }
+</style>
+<div class="ps-content-wrapper-v0">
+<p>In this challenge, the task is to implement a function&nbsp;<em>inventoryList </em>such that<em>: </em></p>
+
+<ul>
+	<li>
+	<p>it maintains the collection of all item names existing in an inventory, where each item is uniquely identified by a name.</p>
+	</li>
+	<li>
+	<p>returns a new object, with three methods:</p>
+
+	<ul>
+		<li>
+		<p>add(name) - The string <em>name </em>parameter is passed, and it is added to the collection. It is guaranteed that at any time, if an item is in the collection, then no other item with the same name will be added to the collection.</p>
+		</li>
+		<li>
+		<p>remove(name) - The string <em>name </em>parameter is passed, and this item is removed from the collection if it exists. If it does not exist, nothing happens.</p>
+		</li>
+		<li>
+		<p>getList() - This returns an array of names of items added so far. The names are returned in the order the corresponding items were added.</p>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>Your implementation of the function&nbsp;will be tested by a stubbed code on several input files. Each input file contains parameters for the functions call. The functions will be called with those parameters, and the result of their executions will be printed to the standard output by the provided code. The stubbed code joins the strings returned by <em>getList</em> function by a comma and prints to the standard output. If <em>getList </em>returns an empty array, the stubbed code prints 'No Items'.</p>
+
+<p>&nbsp;</p>
+
+<p class="section-title">Constraints:</p>
+
+<ul>
+	<li>The size of the collection will not exceed 10 at any point.</li>
+	<li>All names passed to add(name) and remove(name) are non-empty.</li>
+</ul>
+
+<p>&nbsp;</p>
+<!-- <StartOfInputFormat> DO NOT REMOVE THIS LINE-->
+
+<details open=""><summary class="section-title">Input Format For Custom Testing</summary>
+
+<div class="collapsable-details">
+<p>In the first line, there is an integer, <em>n</em>, denoting the number of operations to be performed.</p>
+
+<p>Each line <em>i</em> of the <em>n</em> subsequent lines (where <em>0 ≤ i &lt; n</em>) contains space-separated strings such that the first of them is a function name, and the remaining ones, if any, are parameters for that function.</p>
+</div>
+</details>
+<!-- </StartOfInputFormat> DO NOT REMOVE THIS LINE-->
+
+<details open="open"><summary class="section-title">Sample Case 0</summary>
+
+<div class="collapsable-details">
+<p class="section-title">Sample Input For Custom Testing</p>
+
+<pre>
+5
+add Shirt
+add Trouser
+getList
+remove Shirt
+getList
+</pre>
+
+<p class="section-title">Sample Output</p>
+
+<pre>Shirt,Trouser
+Trouser</pre>
+
+<p class="section-title">Explanation</p>
+
+<p>Items 'Shirt' and 'Trouser' are added by the <em>add </em>function. Then, <em>getList</em> is called and the result is printed. Item 'Shirt' is removed by calling the <em>remove</em> function. Finally, <em>getList</em> is called and the result is printed.</p>
+</div>
+</details>
+
+<details open=""><summary class="section-title">Sample Case 1</summary>
+
+<div class="collapsable-details">
+<p class="section-title">Sample Input For Custom Testing</p>
+
+<pre>3
+add Shirt
+remove Trouser
+getList
+</pre>
+
+<p class="section-title">Sample Output</p>
+
+<pre>Shirt
+</pre>
+
+<p class="section-title">Explanation</p>
+
+<p>Item 'Shirt' is added by the <em>add </em>function. Then, <em>remove</em> is called with 'Trouser', but since it does not exist, nothing happens. Finally, <em>getList</em> is called and the result is printed.</p>
+</div>
+</details>
+</div>
+</div></div></section></div>
+</body>
+</html>
+
+
+<!-- 'use strict';
+
+const fs = require('fs');
+
+process.stdin.resume();
+process.stdin.setEncoding('utf-8');
+
+let inputString = '';
+let currentLine = 0;
+
+process.stdin.on('data', function(inputStdin) {
+  inputString += inputStdin;
+});
+
+process.stdin.on('end', function() {
+  inputString = inputString.split('\n');
+
+  main();
+});
+
+function readLine() {
+  return inputString[currentLine++];
+}
+function inventoryList() {
+    
+    const list = []
+  
+    function add(name){
+        // console.log(name)
+        list.push(name)
+    }
+    
+    function remove(name) {
+        // console.log(name)
+        list.splice(list.indexOf(name),1)
+    }
+    
+    function getList() {
+        // console.log("getList")
+        return list
+    }
+    
+    return {
+        add,
+        remove,
+        getList
+    }
+
+}
+function main() {
+    const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
+    
+    const obj = inventoryList();
+    const operationCount = parseInt(readLine().trim());
+    
+    for(let i = 1; i <= operationCount; i++) {
+        const operationInfo = readLine().trim().split(' ');
+        if (operationInfo[0] === 'add') {
+            obj.add(operationInfo[1]);
+        } else if (operationInfo[0] === 'remove') {
+            obj.remove(operationInfo[1]);
+        } else if (operationInfo[0] === 'getList') {
+            const res = obj.getList();
+            if (res.length === 0) {
+                ws.write('No Items\n');
+            } else {
+                ws.write(`${res.join(',')}\n`);
+            }
+        }
+    }
+    ws.end();
+} -->
